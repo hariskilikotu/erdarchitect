@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - ERD Architect Data Modeler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="brand">ERD Architect</a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="docs.html" class="active">Documentation</a></li>
+                <li><a href="download.html">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container"
+        style="display: grid; grid-template-columns: 250px 1fr; gap: 4rem; padding: 4rem 2rem; align-items: start;">
+        <aside class="docs-sidebar"
+            style="position: sticky; top: 120px; border-right: 1px solid rgba(0,0,0,0.1); padding-right: 2rem;">
+            <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem;">Contents</h3>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <li><a href="#intro" style="font-weight: 500;">Introduction</a></li>
+                <li><a href="#modeling" style="font-weight: 500;">Data Modeling</a></li>
+                <li><a href="#relationships" style="font-weight: 500;">Relationships</a></li>
+                <li><a href="#keys" style="font-weight: 500;">Keys & Domains</a></li>
+                <li><a href="#ui" style="font-weight: 500;">User Interface</a></li>
+                <li><a href="#engineering" style="font-weight: 500;">Engineering</a></li>
+                <li><a href="#reporting" style="font-weight: 500;">Reporting</a></li>
+            </ul>
+        </aside>
+        <main class="docs-content">
+            <section id="intro" style="margin-bottom: 4rem;">
+                <h1>User Manual</h1>
+                <p class="lead" style="font-size: 1.2rem; color: var(--light-text); margin-bottom: 2rem;">Comprehensive
+                    guide for ERD Architect Data Modeler 2022.</p>
+
+                <h2>Introduction</h2>
+                <p>ERD Architect Data Modeler helps organizations to visualize and understand the structure of
+                    information involved in the business. It differentiates business and technical requirements,
+                    describing them in a way consumable to both technical and business users.</p>
+                <p>It helps engineering teams build quality software with clarity and conviction, eliminating
+                    significant re-work and miscommunications.</p>
+            </section>
+
+            <section id="modeling" style="margin-bottom: 4rem;">
+                <h2>Data Modeling</h2>
+                <p>Data modeling is a set of techniques to analyze and define data requirements. ERD Architect supports
+                    <strong>Entity Relationship Modeling</strong> using <strong>IE (Information Engineering)
+                        Notation</strong>.</p>
+
+                <h3 style="margin-top: 2rem;">Entities & Attributes</h3>
+                <p><strong>Entities</strong> are significant "things" in the business environment (people, places,
+                    activities). In a relational database, these become tables.</p>
+                <p><strong>Attributes</strong> describe entities. They represent structural or behavioral
+                    characteristics and become columns in a database.</p>
+                <div style="background: var(--background-color); padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
+                    <strong>Tip:</strong> Press <code>Ctrl+E</code> to create an entity. Press <code>F3</code> to add
+                    attributes.
+                </div>
+            </section>
+
+            <section id="relationships" style="margin-bottom: 4rem;">
+                <h2>Relationships</h2>
+                <p>Relationships represent associations among entities. ERD Architect supports several types:</p>
+
+                <h3 style="margin-top: 1.5rem;">Identifying vs. Non-Identifying</h3>
+                <ul>
+                    <li><strong>Identifying (Solid Line):</strong> Child entity depends on the parent for identity.
+                        Parent primary key becomes part of child primary key.</li>
+                    <li><strong>Non-Identifying (Dashed Line):</strong> Child entity exists independently. Parent key is
+                        a simple foreign key.</li>
+                </ul>
+
+                <h3 style="margin-top: 1.5rem;">Other Relationship Types</h3>
+                <ul>
+                    <li><strong>Many-to-Many:</strong> Automatically resolved into an association table with two
+                        one-to-many relationships.</li>
+                    <li><strong>Recursive:</strong> A relationship between two instances of the same entity (e.g.,
+                        Employee and Supervisor).</li>
+                    <li><strong>Subtype (Is-A):</strong> Represents inheritance. Super-types share common attributes,
+                        while Sub-types have specific ones.</li>
+                </ul>
+            </section>
+
+            <section id="keys" style="margin-bottom: 4rem;">
+                <h2>Keys & Domains</h2>
+
+                <h3>Keys</h3>
+                <p>Keys uniquely identify records. Types supported:</p>
+                <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                    <li style="background: var(--card-bg); padding: 1rem; box-shadow: var(--shadow-sm);"><strong>Primary
+                            Key</strong>: Unique identifier, no nulls.</li>
+                    <li style="background: var(--card-bg); padding: 1rem; box-shadow: var(--shadow-sm);"><strong>Unique
+                            Key</strong>: Unique values, allows one null.</li>
+                    <li style="background: var(--card-bg); padding: 1rem; box-shadow: var(--shadow-sm);"><strong>Foreign
+                            Key</strong>: Refers to a key in another table.</li>
+                    <li style="background: var(--card-bg); padding: 1rem; box-shadow: var(--shadow-sm);">
+                        <strong>Composite Key</strong>: Key with multiple attributes.</li>
+                </ul>
+
+                <h3 style="margin-top: 2rem;">Domains</h3>
+                <p>Domains define reusable data types, lengths, and constraints. Applying domains standardizes data
+                    characteristics across the model.</p>
+            </section>
+
+            <section id="ui" style="margin-bottom: 4rem;">
+                <h2>User Interface</h2>
+                <p>The workspace consists of:</p>
+                <ul>
+                    <li><strong>Object Explorer:</strong> Hierarchical view of all objects.</li>
+                    <li><strong>Diagram Area:</strong> Visual modeling canvas.</li>
+                    <li><strong>Properties Window:</strong> Edit details of selected objects.</li>
+                    <li><strong>Output SQL:</strong> View instant DDL for selected objects.</li>
+                </ul>
+            </section>
+
+            <section id="engineering" style="margin-bottom: 4rem;">
+                <h2>Engineering Features</h2>
+
+                <h3>Forward Engineering</h3>
+                <p>Build a database from your model. Includes <strong>Instant DDL</strong> for quick generation and
+                    <strong>DDL Workbench</strong> for executing scripts against a connected database.</p>
+
+                <h3>Reverse Engineering</h3>
+                <p>Import schema from existing databases (SQL Server, MySQL, Snowflake). Visualize existing structures
+                    and perform analysis.</p>
+
+                <h3>Schema Compare</h3>
+                <p>Compare two models or a model and a database. View differences in a side-by-side tree and generate
+                    synchronization scripts.</p>
+            </section>
+
+            <section id="reporting" style="margin-bottom: 4rem;">
+                <h2>Reports</h2>
+                <p>Generate documentation in HTML or CSV formats. Reports can include diagrams and detailed metadata,
+                    perfect for peer reviews and offline documentation.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                &copy; 2022 Relvar Technologies LLP.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

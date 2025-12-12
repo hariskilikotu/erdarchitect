@@ -3,151 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERD Architect - Next Gen Data Modeling</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>ERD Architect Data Modeler - Visual Data Modeling Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header id="header">
+    <nav class="navbar">
         <div class="container">
-            <nav>
-                <div class="logo">ERD <span>Architect</span></div>
-                <div class="nav-links">
-                    <a href="#features">Features</a>
-                    <a href="#how-it-works">How it Works</a>
-                    <a href="#testimonials">Testimonials</a>
-                    <a href="#pricing">Pricing</a>
-                </div>
-                <button class="btn btn-primary">Get Started</button>
-            </nav>
+            <a href="index.html" class="brand">ERD Architect</a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="docs.html">Documentation</a></li>
+                <li><a href="download.html">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>ERD Architect Data Modeler</h1>
+            <p>Visualize, understand, and design your organization's data with clarity. The powerful solution for modern data engineering teams.</p>
+            <div class="hero-buttons">
+                <a href="download.html" class="btn btn-primary">Download Now</a>
+                <a href="features.html" class="btn btn-secondary">Explore Features</a>
+            </div>
         </div>
     </header>
 
-    <section class="hero">
+    <section class="highlights">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Design Databases at the Speed of Thought</h1>
-                    <p>The most intuitive, powerful, and collaborative entity-relationship diagramming tool for modern engineering teams.</p>
-                    <div class="hero-btns">
-                        <button class="btn btn-primary">Start Modeling Free</button>
-                        <button class="btn btn-outline" style="margin-left: 1rem;">Watch Demo</button>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="hero-image.png" alt="ERD Architect Interface">
-                </div>
+            <div class="section-title">
+                <h2>Why ERD Architect?</h2>
+                <p>Designed to differentiate business and technical requirements, bridging the gap between stakeholders.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="features" class="features">
-        <div class="container">
-            <h2>Why Choose ERD Architect?</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <i class="fas fa-bolt feature-icon"></i>
-                    <h3>Lightning Fast</h3>
-                    <p>Built on a high-performance WebGL engine, rendering thousands of tables with zero lag.</p>
+                    <div class="feature-icon">📊</div>
+                    <h3>Visual Data Modeling</h3>
+                    <p>Create illustrative entity-relationship diagrams, workflows, and use case diagrams to drive your engineering process.</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-users feature-icon"></i>
-                    <h3>Real-time Collaboration</h3>
-                    <p>Work with your team in real-time. See cursors, comments, and changes instantly.</p>
+                    <div class="feature-icon">🔄</div>
+                    <h3>Forward & Reverse Engineering</h3>
+                    <p>Generate database schemas from models or visualize existing databases by reverse engineering.</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-code feature-icon"></i>
-                    <h3>SQL Export/Import</h3>
-                    <p>Instantly generate SQL for PostgreSQL, MySQL, and more. Or import existing schemas.</p>
+                    <div class="feature-icon">⚖️</div>
+                    <h3>Schema Comparison</h3>
+                    <p>Compare models and databases side-by-side to visualize differences and generate sync scripts.</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-magic feature-icon"></i>
-                    <h3>AI Suggestions</h3>
-                    <p>Let our AI suggest relationships, indexes, and optimizations for your data model.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-history feature-icon"></i>
-                    <h3>Version Control</h3>
-                    <p>Track changes, branch, and merge your database designs just like your code.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-lock feature-icon"></i>
-                    <h3>Enterprise Security</h3>
-                    <p>SSO, audit logs, and on-premise deployment options for enterprise needs.</p>
+                    <div class="feature-icon">📑</div>
+                    <h3>Comprehensive Reporting</h3>
+                    <p>Build intuitive reports in HTML and CSV to communicate complex data sets and business rules.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <h2>From Idea to Production</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Design</h3>
-                    <p>Visually map out your entities and relationships using our intuitive drag-and-drop interface.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Collaborate</h3>
-                    <p>Invite your team to review, comment, and refine the model in real-time.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Deploy</h3>
-                    <p>Export production-ready SQL or connect directly to your database to apply changes.</p>
-                </div>
-            </div>
-        </div>
+    <!-- Detailed Features Teaser -->
+    <section class="highlights" style="background-color: var(--card-bg);">
+         <div class="container">
+             <div class="section-title">
+                 <h2>Supported Platforms</h2>
+                 <p>Connect seamlessly with industry-standard databases.</p>
+             </div>
+             <div class="features-grid" style="grid-template-columns: repeat(3, 1fr); text-align: center;">
+                 <div class="feature-card">
+                     <h3>SQL Server</h3>
+                     <p>Full support via ODBC Driver.</p>
+                 </div>
+                 <div class="feature-card">
+                     <h3>MySQL</h3>
+                     <p>Native integration including version 8.</p>
+                 </div>
+                 <div class="feature-card">
+                     <h3>Snowflake</h3>
+                     <p>cloud data platform connectivity.</p>
+                 </div>
+             </div>
+         </div>
     </section>
 
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <div class="logo">ERD <span>Architect</span></div>
-                    <p style="margin-top: 1rem; font-size: 0.9rem;">
-                        The standard for modern data modeling. Built for developers, by developers.
-                    </p>
+                    <h4>ERD Architect</h4>
+                    <p>Relvar Technologies LLP. All Rights Reserved.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Product</h4>
                     <ul>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Integrations</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Changelog</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="download.html">Download</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Resources</h4>
+                    <h4>Support</h4>
                     <ul>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">API Reference</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Community</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Legal</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="docs.html">Documentation</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
-                &copy; 2025 ERD Architect Inc. All rights reserved.
+            <div class="footer-bottom">
+                &copy; 2022 Relvar Technologies LLP.
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
