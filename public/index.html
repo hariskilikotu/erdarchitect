@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Make a Contribution</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Make a Contribution</h1>
+    <p class="subtitle">Fill in your details and the amount you would like to contribute.</p>
+
+    <form id="contribution-form" novalidate>
+      <div class="field">
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" autocomplete="name" maxlength="100" required />
+        <span class="error" data-error-for="name"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" maxlength="255" required />
+        <span class="error" data-error-for="email"></span>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="20" placeholder="+91 98765 43210" required />
+        <span class="error" data-error-for="phone"></span>
+      </div>
+
+      <div class="field">
+        <label for="amount">Contribution amount</label>
+        <input id="amount" name="amount" type="number" inputmode="decimal" min="0.01" step="0.01" placeholder="0.00" required />
+        <span class="error" data-error-for="amount"></span>
+      </div>
+
+      <button type="submit" id="submit-btn">Submit contribution</button>
+      <div id="form-message" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
