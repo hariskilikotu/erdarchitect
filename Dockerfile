@@ -15,7 +15,7 @@ COPY public ./public
 # Run as the unprivileged "node" user that ships with the base image
 USER node
 
-EXPOSE 3000
+EXPOSE 8080
 
 HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
   CMD wget -qO- http://127.0.0.1:${PORT:-3000}/api/health || exit 1
